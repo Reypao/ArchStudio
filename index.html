@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchStudio & Design</title>
+
+  <!-- Correct CSS Path -->
+  <link rel="stylesheet" href="style/styles.css">
+
+  <!-- Luxury Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <img src="images/logoarchdesign.jpg" alt="ArchStudio Logo">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Overlay Menu -->
+  <div class="overlay-menu" id="overlayMenu">
+    <div class="close-btn" onclick="toggleMenu()">×</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-wrapper">
+      <img src="images/logoarchdesign.jpg" class="hero-logo" alt="ArchStudio Logo">
+      <h1>ArchStudio & Design</h1>
+      <h2>Timeless Spaces. Purposeful Design.</h2>
+      <p>Architectural design by Monica Thorlakson</p>
+      <a href="projects.html" class="btn">View Projects</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 ArchStudio & Design | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

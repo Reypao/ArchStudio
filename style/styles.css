@@ -1,0 +1,336 @@
+/* ===============================
+   update
+================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #2f3f34;
+  /* architectural green */
+  color: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   TYPOGRAPHY
+================================== */
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===============================
+   NAVIGATION
+================================== */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* nav icon */
+
+.brand img {
+  width: 50px;
+}
+
+/* Hamburger */
+.hamburger {
+  width: 28px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-shadow: 5rem;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 100%;
+  background: #692404;
+  transition: 0.4s ease;
+
+}
+
+/* Overlay Menu */
+.overlay-menu {
+  position: fixed;
+  inset: 0;
+
+  background: url("../images/buildingHouse2.jpg") center/cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-100%);
+  transition: transform 0.6s ease;
+  z-index: 999;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.overlay-menu.active {
+  transform: translateY(0);
+}
+
+.overlay-menu nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-align: center;
+}
+
+.overlay-menu nav a {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #692404;
+  transition: 0.3s ease;
+}
+
+.overlay-menu nav a:hover {
+  letter-spacing: 3px;
+}
+
+.overlay-menu::before {
+  backdrop-filter: blur(2px);
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #692404;
+  z-index: 2;
+}
+
+/* ===============================
+   HERO SECTION
+================================== */
+
+.hero {
+  padding-top: 150px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 6rem;
+  color: #e7e1a8;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.hero-image img {
+  width: 75%;
+  max-width: 900px;
+  height: auto;
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.hero-left {
+  font-style: italic;
+}
+
+.hero-right {
+  text-transform: uppercase;
+}
+
+.hero-wrapper {
+  text-align: center;
+  padding-top: 160px;
+
+}
+
+/* ===============================
+   HERO SECTION (FULL SCREEN IMAGE)
+================================== */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../images/buildingHouse.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero-logo {
+  width: 280px;
+  /* Adjust size here */
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+
+  background: linear-gradient(135deg,
+      #f5e6b3 0%,
+      #d4af37 25%,
+      #b8962e 50%,
+      #f5e6b3 75%,
+      #d4af37 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Strong shadow */
+  text-shadow:
+    0 3px 6px rgba(20, 1, 1, 0.6),
+    0 8px 20px rgba(12, 1, 1, 0.5),
+    0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   GENERAL SECTIONS
+================================== */
+
+section {
+  padding: 100px 80px;
+}
+
+.section-light {
+  background: #f4f4f4;
+  color: #111;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid img {
+  width: 100%;
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  background: #c9a34e;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* ===============================
+   FOOTER
+================================== */
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #1f2b24;
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 992px) {
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  section {
+    padding: 80px 30px;
+  }
+
+  .navbar {
+    padding: 20px 25px;
+  }
+
+}
