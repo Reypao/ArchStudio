@@ -20,23 +20,27 @@
       <img src="images/logoarchdesign.jpg" alt="ArchStudio Logo">
     </div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="overlayMenu" aria-expanded="false">
+      <span class="menu-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
   </header>
 
   <!-- Overlay Menu -->
-  <div class="overlay-menu" id="overlayMenu">
-    <div class="close-btn" onclick="toggleMenu()">×</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="menu-overlay" id="overlayMenu" aria-hidden="true">
+    <aside class="menu-panel" role="dialog" aria-modal="true" aria-label="site-menu">
+      <button class="menu-close" id="menuClose" aria-label="close-menu"><span aria-hidden="true">x</span></button>
+      <nav class="menu-nav">
+        <a class="menu-link active" href="index.html">Home</a>
+        <a class="menu-link" href="about.html">About</a>
+        <a class="menu-link"  href="projects.html">Projects</a>
+        <a class="menu-link"  href="services.html">Services</a>
+        <a class="menu-link"  href="contact.html">Contact</a>
+      </nav>
+    </aside>
   </div>
 
   <section class="hero">

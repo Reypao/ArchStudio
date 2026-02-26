@@ -334,3 +334,152 @@ section {
   }
 
 }
+
+/* ===============================
+   agregado por Sebastian al final
+================================== */
+
+/* ===============================
+   MENU OVERLAY (MARTIN STYLE)
+================================== */
+
+/* bloquea scroll cuando el menú está abierto */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* botón hamburguesa: cuadrado naranja */
+.menu-btn {
+  width: 56px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  background: #c65a17; /* naranja */
+  display: grid;
+  place-items: center;
+  z-index: 1001;
+}
+
+/* icono hamburguesa */
+.menu-icon {
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon span {
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  display: block;
+}
+
+/* overlay full screen (fondo oscuro) */
+.overlay-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.85);
+  z-index: 2000;
+
+  /* oculto por defecto */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+/* cuando abre */
+.overlay-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* panel derecho */
+.menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(520px, 88vw);
+  background: #222; /* gris oscuro tipo captura */
+  padding: 80px 70px;
+
+  /* animación slide */
+  transform: translateX(100%);
+  transition: transform 0.45s ease;
+}
+
+/* slide-in cuando abre */
+.overlay-menu.is-open .menu-panel {
+  transform: translateX(0);
+}
+
+/* botón cerrar: mismo cuadrado naranja */
+.menu-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  width: 56px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  background: #c65a17;
+  display: grid;
+  place-items: center;
+}
+
+.menu-close span {
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* links grandes */
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.menu-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  line-height: 1;
+  text-decoration: none;
+  color: #f2f2f2;
+  letter-spacing: 0.5px;
+}
+
+/* activo (naranja como Home en captura) */
+.menu-link.active {
+  color: #c65a17;
+}
+
+/* hover sutil */
+.menu-link:hover {
+  opacity: 0.85;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .menu-panel {
+    padding: 70px 32px;
+  }
+  .menu-link {
+    font-size: 46px;
+  }
+  .menu-close {
+    top: 22px;
+    right: 22px;
+    width: 52px;
+    height: 52px;
+  }
+  .menu-btn {
+    width: 52px;
+    height: 52px;
+  }
+}
