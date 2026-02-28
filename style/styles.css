@@ -58,7 +58,8 @@ p {
 }
 
 /* Hamburger */
-.hamburger {
+/* .................EN lugar de Hamburger=.menu-btn */
+.menu-btn {
   width: 28px;
   cursor: pointer;
   display: flex;
@@ -302,10 +303,113 @@ section {
 ================================== */
 
 .footer {
-  padding: 40px;
-  text-align: center;
+  background: linear-gradient(135deg, #2a2f34, #1f2327);
+  color: #dcdcdc;
+  padding: 80px 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Left side */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #c9a34e; /* gold accent */
+}
+
+.footer-label {
   font-size: 0.9rem;
-  background: #1f2b24;
+  color: #aaa;
+}
+
+.footer-highlight {
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-email {
+  color: #c9a34e;
+  font-weight: 500;
+}
+
+/* Right side */
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-right h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.footer-right p {
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #c9a34e;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer {
+    padding: 60px 30px;
+  }
 }
 
 /* ===============================
@@ -376,22 +480,20 @@ body.no-scroll {
 }
 
 /* overlay full screen (fondo oscuro) */
-.overlay-menu {
+.menu-overlay {
   position: fixed;
   inset: 0;
   background: rgba(15, 15, 15, 0.85);
   z-index: 2000;
-
   /* oculto por defecto */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 /* cuando abre */
-.overlay-menu.is-open {
+.menu-overlay .is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -413,7 +515,7 @@ body.no-scroll {
 }
 
 /* slide-in cuando abre */
-.overlay-menu.is-open .menu-panel {
+.menu-overlay .is-open .menu-panel {
   transform: translateX(0);
 }
 
