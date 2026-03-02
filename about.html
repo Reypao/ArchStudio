@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About | ArqStudio & Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+    <!-- ===============================
+         NAVBAR
+    ================================== -->
+
+    <header class="navbar">
+        <div class="brand">
+            <img src="images/logoArchDesigB.png" alt="ArqStudio Logo">
+        </div>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu"
+            aria-controls="overlayMenu" aria-expanded="false">
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Overlay Menu -->
+    <div class="menu-overlay" id="overlayMenu" aria-hidden="true">
+        <aside class="menu-panel" role="dialog" aria-modal="true">
+            <button class="menu-close" id="menuClose">
+                <span>x</span>
+            </button>
+
+            <nav class="menu-nav">
+                <a class="menu-link" href="index.html">Home</a>
+                <a class="menu-link active" href="about.html">About</a>
+                <a class="menu-link" href="projects.html">Portfolio</a>
+                <a class="menu-link" href="services.html">Services</a>
+                <a class="menu-link" href="contact.html">Contact</a>
+            </nav>
+        </aside>
+    </div>
+
+    <!-- ===============================
+         ABOUT STRUCTURE (Screenshot Style)
+    ================================== -->
+
+    <section class="about-layout">
+
+        <!-- LEFT VISUAL SIDE -->
+        <div class="about-left">
+
+            <!-- Large Featured Image -->
+            <div class="about-feature">
+                <img src="images/steve&Monica.jpg" alt="ArqStudio project">
+            </div>
+
+            <!-- Dark Info Block -->
+            <div class="about-info">
+                7723 S 700 E Midvale, Utah<br>
+                FOUNDED BY<br>
+                MONICA THORLAKSON · ARCHITECT<br>
+                STEPHEN THORLAKSON · CONTRACTOR
+            </div>
+
+            <!-- Orange Accent Block -->
+            <div class="about-accent">
+                <h2>ArqStudio</h2>
+                <p>Timeless Spaces Purposeful Design</p>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT TYPOGRAPHY SIDE -->
+        <div class="about-right">
+
+            <h1>About</h1>
+            <h1 class="accent-text">ArqStudio & Design</h1>
+            
+            <div class="about-description">
+                <p>
+                    ArqStudio & Design was established in Salt Lake City, Utah
+                    through the collaboration of architectural vision and
+                    construction expertise.
+                </p>
+
+                <p>
+                    Monica Thorlakson, Architect, and Stephen Thorlakson,
+                    Contractor, formed the studio with a shared commitment
+                    to precision, structural integrity, and refined design.
+                </p>
+
+                <p>
+                    Our work bridges concept and construction —
+                    ensuring each project is both visionary and buildable,
+                    expressive and enduring.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

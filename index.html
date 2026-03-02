@@ -1,124 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArchStudio & Design</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchStudio & Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+  </head>
 
-  <!-- Correct CSS Path -->
-  <link rel="stylesheet" href="style/styles.css">
+  <body>
 
-  <!-- Luxury Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <header class="navbar">
+      <div class="brand">
+        <img src="images/logoArchDesigB.png" alt="ArchStudio Logo">
+      </div>
 
-<body>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="overlayMenu" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </header>
 
-  <header class="navbar">
-    <div class="brand">
-      <img src="images/logoArchDesigB.png" alt="ArchStudio Logo">
+    <!-- Overlay Menu -->
+    <div class="menu-overlay" id="overlayMenu" aria-hidden="true">
+      <aside class="menu-panel" role="dialog" aria-modal="true" aria-label="site-menu">
+        <button class="menu-close" id="menuClose" aria-label="close-menu"><span aria-hidden="true">x</span></button>
+        <nav class="menu-nav">
+          <a class="menu-link active" href="index.html">Home</a>
+          <a class="menu-link" href="about.html">About</a>
+          <a class="menu-link" href="projects.html">Projects</a>
+          <a class="menu-link" href="services.html">Services</a>
+          <a class="menu-link" href="contact.html">Contact</a>
+        </nav>
+      </aside>
     </div>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="overlayMenu" aria-expanded="false">
-      <span class="menu-icon" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </button>
-  </header>
+    <section class="hero">
+      <div class="hero-overlay"></div>
 
-  <!-- Overlay Menu -->
-  <div class="menu-overlay" id="overlayMenu" aria-hidden="true">
-    <aside class="menu-panel" role="dialog" aria-modal="true" aria-label="site-menu">
-      <button class="menu-close" id="menuClose" aria-label="close-menu"><span aria-hidden="true">x</span></button>
-      <nav class="menu-nav">
-        <a class="menu-link active" href="index.html">Home</a>
-        <a class="menu-link" href="about.html">About</a>
-        <a class="menu-link" href="projects.html">Projects</a>
-        <a class="menu-link" href="services.html">Services</a>
-        <a class="menu-link" href="contact.html">Contact</a>
-      </nav>
-    </aside>
-  </div>
+      <div class="hero-wrapper">
+        <img src="images/logoArchDesigB.png" class="hero-logo" alt="ArchStudio Logo">
+        <h1>ArqStudio & Design</h1>
+        <h2>Timeless Spaces. Purposeful Design.</h2>
+        <p>Architectural design by Monica Thorlakson</p>
+        <a href="projects.html" class="btn">View Projects</a>
+      </div>
+    </section>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
+    <footer class="footer">
+      <div class="footer-container">
 
-    <div class="hero-wrapper">
-      <img src="images/logoArchDesigB.png" class="hero-logo" alt="ArchStudio Logo">
-      <h1>ArchStudio & Design</h1>
-      <h2>Timeless Spaces. Purposeful Design.</h2>
-      <p>Architectural design by Monica Thorlakson</p>
-      <a href="projects.html" class="btn">View Projects</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-container">
-
-      <!-- Left Side -->
-      <div class="footer-left">
-        <div class="footer-item">
-          <div class="footer-icon">
-            <i class="fas fa-map-marker-alt"></i>
+        <!-- Left Side -->
+        <div class="footer-left">
+          <div class="footer-item">
+            <div class="footer-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <p class="footer-label">21 Revolution Street</p>
+              <p class="footer-highlight">Salt Lake City, Utah U.S.</p>
+            </div>
           </div>
-          <div>
-            <p class="footer-label">21 Revolution Street</p>
-            <p class="footer-highlight">Salt Lake City, Utah U.S.</p>
+
+          <div class="footer-item">
+            <div class="footer-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <p class="footer-highlight">+1 555 123456</p>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <p class="footer-email">info@archstudio.com</p>
+            </div>
           </div>
         </div>
 
-        <div class="footer-item">
-          <div class="footer-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div>
-            <p class="footer-highlight">+1 555 123456</p>
-          </div>
-        </div>
+        <!-- Right Side -->
+        <div class="footer-right">
 
-        <div class="footer-item">
-          <div class="footer-icon">
-            <i class="fas fa-envelope"></i>
+          <!-- LOGO -->
+          <div class="footer-logo">
+            <img src="images/logoArchDesigB.png" alt="ArchStudio Logo">
           </div>
-          <div>
-            <p class="footer-email">info@archstudio.com</p>
+
+          <h3>About ArchStudio</h3>
+          <p>
+            We create timeless architectural spaces that blend form, function,
+            and purpose. Every project is designed with precision and vision.
+          </p>
+
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
           </div>
         </div>
       </div>
+    </footer>
 
-      <!-- Right Side -->
-      <div class="footer-right">
+    <script src="js/script.js"></script>
 
-        <!-- LOGO -->
-        <div class="footer-logo">
-          <img src="images/logoArchDesigB.png" alt="ArchStudio Logo">
-        </div>
-
-        <h3>About ArchStudio</h3>
-        <p>
-          We create timeless architectural spaces that blend form, function,
-          and purpose. Every project is designed with precision and vision.
-        </p>
-
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          
-        </div>
-
-      </div>
-
-    </div>
-  </footer>
-
-
-  <script src="js/script.js"></script>
-
-</body>
+  </body>
 
 </html>

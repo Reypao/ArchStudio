@@ -1,5 +1,5 @@
 /* ===============================
-   update
+   GLOBAL RESET
 ================================== */
 * {
   margin: 0;
@@ -14,7 +14,6 @@ html {
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #2f3f34;
-  /* architectural green */
   color: #f5f5f5;
   line-height: 1.6;
   overflow-x: hidden;
@@ -23,7 +22,6 @@ body {
 /* ===============================
    TYPOGRAPHY
 ================================== */
-
 h1,
 h2,
 h3 {
@@ -39,7 +37,6 @@ p {
 /* ===============================
    NAVIGATION
 ================================== */
-
 .navbar {
   position: fixed;
   width: 100%;
@@ -51,146 +48,38 @@ p {
   z-index: 1000;
 }
 
-/* nav icon */
-
 .brand img {
   width: 50px;
 }
 
-/* Hamburger */
-/* .................EN lugar de Hamburger=.menu-btn */
+/* Menu Button */
 .menu-btn {
-  width: 28px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-shadow: 5rem;
-}
-
-.hamburger span {
-  height: 2px;
-  width: 100%;
-  background: #692404;
-  transition: 0.4s ease;
-
-}
-
-/* Overlay Menu */
-.overlay-menu {
   position: fixed;
-  inset: 0;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
 
-  background: url("../images/buildingHouse2.jpg") center/cover no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transform: translateY(-100%);
-  transition: transform 0.6s ease;
-  z-index: 999;
-  animation: slowZoom 20s ease-in-out infinite alternate;
-}
-
-.overlay-menu.active {
-  transform: translateY(0);
-}
-
-.overlay-menu nav {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  text-align: center;
-}
-
-.overlay-menu nav a {
-  font-size: 2.2rem;
-  text-decoration: none;
-  color: #692404;
-  transition: 0.3s ease;
-}
-
-.overlay-menu nav a:hover {
-  letter-spacing: 3px;
-}
-
-.overlay-menu::before {
-  backdrop-filter: blur(2px);
-}
-
-.close-btn {
-  position: absolute;
-  top: 40px;
-  right: 60px;
-  font-size: 3rem;
+  width: 60px;
+  height: 70px;
+  border: none;
   cursor: pointer;
-  color: #692404;
-  z-index: 2;
+  background: #c9a34e;
+
+  display: grid;
+  place-items: center;
+
+  z-index: 3000;
 }
 
 /* ===============================
-   HERO SECTION
+   HERO
 ================================== */
-
 .hero {
   padding-top: 150px;
   padding-bottom: 60px;
-  text-align: center;
-}
-
-.hero-title {
-  font-size: 6rem;
-  color: #e7e1a8;
-  margin-bottom: 40px;
-  letter-spacing: 3px;
-}
-
-.hero-image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.hero-image img {
-  width: 75%;
-  max-width: 900px;
-  height: auto;
-}
-
-.hero-bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 80px;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  color: #ffffff;
-}
-
-.hero-left {
-  font-style: italic;
-}
-
-.hero-right {
-  text-transform: uppercase;
-}
-
-.hero-wrapper {
-  text-align: center;
-  padding-top: 160px;
-
-}
-
-/* ===============================
-   HERO SECTION (FULL SCREEN IMAGE)
-================================== */
-
-.hero {
   position: relative;
   height: 100vh;
-  background: url("../images/buildingHouse.jpg") center/cover no-repeat;
+  background: url("../images/interior1.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,12 +87,11 @@ p {
   color: white;
 }
 
-/* Dark overlay for readability */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(55, 51, 51, 0.55);
 }
 
 .hero-wrapper {
@@ -211,40 +99,34 @@ p {
   z-index: 2;
   max-width: 900px;
   padding: 20px;
+  text-align: center;
 }
 
 .hero-logo {
   width: 280px;
-  /* Adjust size here */
   margin-bottom: 30px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 10px;
-
   background: linear-gradient(135deg,
       #f5e6b3 0%,
       #d4af37 25%,
       #b8962e 50%,
       #f5e6b3 75%,
       #d4af37 100%);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
-  /* Strong shadow */
   text-shadow:
-    0 3px 6px rgba(20, 1, 1, 0.6),
-    0 8px 20px rgba(12, 1, 1, 0.5),
-    0 15px 35px rgba(0, 0, 0, 0.4);
+    0 4px 8px rgba(125, 129, 128, 0.7),
+    0 10px 25px rgba(214, 196, 196, 0.6),
+    0 20px 50px rgba(231, 228, 228, 0.5);
 }
 
-
 .hero h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
@@ -256,7 +138,6 @@ p {
 /* ===============================
    GENERAL SECTIONS
 ================================== */
-
 section {
   padding: 100px 80px;
 }
@@ -271,7 +152,6 @@ section {
   margin: auto;
 }
 
-/* Grid */
 .grid {
   display: grid;
   gap: 30px;
@@ -283,7 +163,6 @@ section {
   display: block;
 }
 
-/* Buttons */
 .btn {
   background: #c9a34e;
   color: white;
@@ -301,7 +180,6 @@ section {
 /* ===============================
    FOOTER
 ================================== */
-
 .footer {
   background: linear-gradient(135deg, #2a2f34, #1f2327);
   color: #dcdcdc;
@@ -317,154 +195,14 @@ section {
   flex-wrap: wrap;
 }
 
-/* Left side */
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex: 1;
-  min-width: 280px;
-}
-
-.footer-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.footer-icon {
-  width: 45px;
-  height: 45px;
-  background: rgba(255, 255, 255, 0.05);
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  font-size: 16px;
-  color: #c9a34e; /* gold accent */
-}
-
-.footer-label {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-.footer-highlight {
-  font-weight: 600;
-  color: #fff;
-}
-
-.footer-email {
-  color: #c9a34e;
-  font-weight: 500;
-}
-
-/* Right side */
-.footer-right {
-  flex: 1;
-  min-width: 280px;
-}
-
-.footer-right h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.footer-right p {
-  color: #bbb;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  max-width: 400px;
-}
-
-/* Social icons */
-.footer-social {
-  display: flex;
-  gap: 15px;
-}
-
-.footer-social a {
-  width: 42px;
-  height: 42px;
-  background: rgba(255, 255, 255, 0.08);
-  display: grid;
-  place-items: center;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.footer-social a:hover {
-  background: #c9a34e;
-  color: #111;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .footer {
-    padding: 60px 30px;
-  }
-}
-
 /* ===============================
-   RESPONSIVE
+   MENU OVERLAY (JS COMPATIBLE)
 ================================== */
 
-@media (max-width: 992px) {
-
-  .hero-title {
-    font-size: 3.5rem;
-  }
-
-  .hero-bottom {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  section {
-    padding: 80px 30px;
-  }
-
-  .navbar {
-    padding: 20px 25px;
-  }
-
-}
-
-/* ===============================
-   agregado por Sebastian al final
-================================== */
-
-/* ===============================
-   MENU OVERLAY (MARTIN STYLE)
-================================== */
-
-/* bloquea scroll cuando el menú está abierto */
 body.no-scroll {
   overflow: hidden;
 }
 
-/* botón hamburguesa: cuadrado naranja */
-.menu-btn {
-  width: 56px;
-  height: 56px;
-  border: none;
-  cursor: pointer;
-  background: #c65a17; /* naranja */
-  display: grid;
-  place-items: center;
-  z-index: 1001;
-}
-
-/* icono hamburguesa */
 .menu-icon {
   width: 22px;
   display: flex;
@@ -479,57 +217,51 @@ body.no-scroll {
   display: block;
 }
 
-/* overlay full screen (fondo oscuro) */
+/* Overlay container */
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 15, 15, 0.85);
+  background: rgba(121, 110, 110, 0.85);
   z-index: 2000;
-  /* oculto por defecto */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
-/* cuando abre */
-.menu-overlay .is-open {
+/* When JS adds .is-open */
+.menu-overlay.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-/* panel derecho */
+/* Sliding panel */
 .menu-panel {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: min(520px, 88vw);
-  background: #222; /* gris oscuro tipo captura */
+  background: #81175c58;
   padding: 80px 70px;
-
-  /* animación slide */
   transform: translateX(100%);
   transition: transform 0.45s ease;
 }
 
-/* slide-in cuando abre */
-.menu-overlay .is-open .menu-panel {
+.menu-overlay.is-open .menu-panel {
   transform: translateX(0);
 }
 
-/* botón cerrar: mismo cuadrado naranja */
 .menu-close {
   position: absolute;
   top: 40px;
   right: 40px;
-
   width: 56px;
   height: 56px;
   border: none;
   cursor: pointer;
-  background: #c65a17;
+  background: #c9a34e;
   display: grid;
   place-items: center;
 }
@@ -537,10 +269,8 @@ body.no-scroll {
 .menu-close span {
   color: #fff;
   font-size: 32px;
-  line-height: 1;
 }
 
-/* links grandes */
 .menu-nav {
   display: flex;
   flex-direction: column;
@@ -550,38 +280,156 @@ body.no-scroll {
 .menu-link {
   font-family: 'Playfair Display', serif;
   font-size: 64px;
-  line-height: 1;
   text-decoration: none;
   color: #f2f2f2;
-  letter-spacing: 0.5px;
 }
 
-/* activo (naranja como Home en captura) */
 .menu-link.active {
-  color: #c65a17;
+  color: #c9a34e;
 }
 
-/* hover sutil */
 .menu-link:hover {
   opacity: 0.85;
 }
 
-/* responsive */
-@media (max-width: 600px) {
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 992px) {
+  section {
+    padding: 80px 30px;
+  }
+
+  .navbar {
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 600px)
   .menu-panel {
     padding: 70px 32px;
   }
+
   .menu-link {
     font-size: 46px;
   }
+
   .menu-close {
     top: 22px;
     right: 22px;
     width: 52px;
     height: 52px;
   }
-  .menu-btn {
-    width: 52px;
-    height: 52px;
-  }
-}
+
+  /* ===============================
+   ABOUT page
+================================== */
+  .about-layout {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            min-height: 100vh;
+        }
+
+        /* LEFT SIDE GRID */
+        .about-left {
+            display: grid;
+            grid-template-rows: 65% 35%;
+            grid-template-columns: 50% 50%;
+        }
+
+        .about-feature {
+            grid-column: 1 / 3;
+        }
+
+        .about-feature img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Bottom Left Dark Block */
+        .about-info {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+
+        /* Bottom Right Accent Block */
+        .about-accent {
+            background: #c65a17;
+            color: #ffffff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-accent h3 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+        }
+
+        /* RIGHT SIDE TYPOGRAPHY */
+        .about-right {
+            background: #111111;
+            color: #ffffff;
+            padding: 120px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-right h1 {
+            font-size: 5rem;
+            line-height: 1.05;
+            margin: 0;
+        }
+
+        .about-right .accent-text {
+            color: #c65a17;
+        }
+
+        .about-description {
+            margin-top: 50px;
+            max-width: 520px;
+            font-size: 1rem;
+            line-height: 1.9;
+        }
+
+        /* ===============================
+           RESPONSIVE
+        ================================== */
+
+        @media (max-width: 992px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .about-left {
+                grid-template-rows: 400px 200px;
+            }
+
+            .about-right {
+                padding: 80px 40px;
+            }
+
+            .about-right h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-right h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-description {
+                font-size: 0.95rem;
+            }
+        }
